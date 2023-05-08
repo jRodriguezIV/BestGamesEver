@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("*", (req,res) => {
-    res.status(404).send("This is the Error Resonse")
+    res.status(404).send("This is the Error Response")
 })
 
 module.exports = app;
