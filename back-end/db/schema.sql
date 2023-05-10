@@ -11,6 +11,6 @@ CREATE TABLE games (
     cost DECIMAL NOT NULL,
     genre TEXT,
     game_description VARCHAR,
-    release_date DATE,
+    release_date INT,
     multiplayer BOOLEAN DEFAULT FALSE
 );
