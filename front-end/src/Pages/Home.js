@@ -1,12 +1,11 @@
 
+import Index from "../Components/Index";
 
 export default function Home() {
-
-
-
-    return (
-        <div>
-            This is the Home/Index Page
-        </div>
-    )
+  return (
+    <div
+    >
+      <Index />
+    </div>
+  );
 }
