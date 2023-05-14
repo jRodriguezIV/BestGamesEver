@@ -40,7 +40,7 @@ games.get("/:id", async (req, res) => {
     if (deletedGame.id) {
       res.status(200).json(deletedGame);
     } else {
-      res.status(404).json("Song not found");
+      res.status(404).json("Game not found");
     }
   });
   
