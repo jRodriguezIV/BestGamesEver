@@ -30,6 +30,8 @@ To get started, clone the repository and install the dependencies:
 git clone https://github.com/jRodriguezIV/BestGamesEver.git
 cd BestGamesEver
 npm install
+# start the front-end and the back-end directories seperately using
+npm start 
 ```
 ## Usage
 
