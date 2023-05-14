@@ -22,7 +22,7 @@ const getGame = async (id) => {
 const createGame = async (game) => {
   try {
     const newGame = await db.one(
-      "INSERT INTO games (name, artist, album , time ,is_favorite) VALUES($1, $2, $3, $4, $5) RETURNING *",
+      "INSERT INTO games (name, image, cost, genre, game_description, release_date, multiplayer) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *",
       [game.name, game.image, game.cost, game.genre, game.game_description, game.release_date, game.multiplayer]
       
     );
