@@ -23,9 +23,9 @@ export default function Game({ game }) {
           className="col-lg-4 col-sm-11 pt-5 "
           style={{ backgroundColor: "rgb(194 191 191)", marginTop: "10rem" }}
         >
-          <span style={{ backgroundColor: "rgb(194 191 191)" }}>
+          <span  style={{ backgroundColor: "rgb(194 191 191)" }}>
             <br />
-            <p>
+            <p style={{marginTop:"10%"}}> 
               <span style={{ color: "rgb(217 56 7)", fontSize: "larger" }}>
                 <strong>{game.name}</strong>
               </span>
