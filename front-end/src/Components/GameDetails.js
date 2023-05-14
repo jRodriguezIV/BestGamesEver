@@ -49,6 +49,7 @@ export default function GameDetails() {
               className="pt-5 pb-4"
               src={game.image}
               style={{ width: "500px", top: "15%" }}
+              alt={game.name}
             />
           </div>
 

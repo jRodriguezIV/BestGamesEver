@@ -8,7 +8,7 @@ export default function Game({ game }) {
             <span key={game.id} className="container mb-5 " style={{ backgroundColor: "#F24822" }}>
        <div className="row">
          <div className="col-lg-7 col-sm-1">
-           <img  className="pt-5 pb-4" src={game.image} style={{ width: "500px" }} />
+           <img  className="pt-5 pb-4" src={game.image} style={{ width: "500px" }} alt={game.name}/>
          </div>
 
          <div className="col-lg-4 col-sm-11 pt-5 " style={{backgroundColor:"rgb(194 191 191)", marginTop:"10rem"}}>
