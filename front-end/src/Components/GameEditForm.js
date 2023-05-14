@@ -32,9 +32,8 @@ export default function GameEditform() {
           navigate(`/${id}`);
         },
         (error) => console.error(error)
-      )
-      .catch((c) => console.warn("catch", c));
-  };
+    ).catch((c) => console.warn("catch",c))
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
