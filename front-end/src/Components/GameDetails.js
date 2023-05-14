@@ -11,9 +11,12 @@ export default function GameDetails() {
   useEffect(() => {
     axios
       .get(`${API}/games/${id}`)
-      .then((response) => setGame(response.data))
+      .then(
+        (response) => setGame(response.data),
+        (error) => navigate(`*`)
+      )
       .catch((error) => console.warn("catch", error));
-  }, [id]);
+  }, [id, navigate]);
 
   const handleDelete = () => {
     deleteGame();

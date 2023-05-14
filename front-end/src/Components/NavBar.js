@@ -27,8 +27,8 @@ export default function NavBar() {
     return ( 
        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top" style={{backgroundColor: "#F24822"}}>
         <div className="container-fluid p-2">
-        <Link className="navbar-brand" to="/" onMouseEnter={handleLogoEnter} onMouseLeave={handleLogoLeave} style={{ color: logo ? "#f22c3d" : "black"}}><strong>BestGamesEver</strong></Link>
-        <Link to="/new" className="nav-link active" onMouseEnter={handleNewEnter} onMouseLeave={handleNewLeave} style={{ color: newB ? "#f22c3d" : "black"}}>New</Link>
+        <Link className="navbar-brand" to="/" onMouseEnter={handleLogoEnter} onMouseLeave={handleLogoLeave} style={{ color: logo ? "#7D2815" : "black"}}><strong>BestGamesEver</strong></Link>
+        <Link to="/new" className="nav-link active" onMouseEnter={handleNewEnter} onMouseLeave={handleNewLeave} style={{ color: newB ? "#7D2815" : "black", marginRight:"5%"}}>New Game Entry</Link>
         </div>
        </nav>
     )

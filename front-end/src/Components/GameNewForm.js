@@ -6,7 +6,7 @@ const API = process.env.REACT_APP_API_URL
 export default function GameNewForm() {
     const [game, setGame] = useState({
         name:"",
-        multiplayer:"",
+        multiplayer: false,
         genre:"",
         cost:"",
         release_date:"",

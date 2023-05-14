@@ -6,10 +6,18 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function GameEditform() {
   const { id } = useParams();
-  const [game, setGame] = useState({});
+  const [game, setGame] = useState({
+    name:"",
+    multiplayer: false,
+    genre:"",
+    cost:"",
+    release_date:"",
+    game_description:"",
+    image:""
+  });
   const navigate = useNavigate();
 
-  console.log(game)
+
 
   useEffect(() => {
     axios
@@ -42,7 +50,7 @@ export default function GameEditform() {
     updateGame(game, id);
   };
 
-  console.log(game.multiplayer);
+
 
   return (
     <div
@@ -58,7 +66,7 @@ export default function GameEditform() {
 
       <span className="row" style={{ marginRight: "30%" }}>
         <form onSubmit={handleSubmit}>
-          <label id="name" htmlFor="">
+          <label id="name" htmlFor="name">
             Name:&nbsp;&nbsp;
           </label>
           <input
@@ -73,7 +81,7 @@ export default function GameEditform() {
 
           <br />
 
-          <label id="multiplayer" htmlFor="">
+          <label id="multiplayer" htmlFor="multiplayer">
             Multiplayer:&nbsp;&nbsp;
           </label>
           <input
@@ -87,7 +95,7 @@ export default function GameEditform() {
 
           <br />
 
-          <label id="genre" htmlFor="">
+          <label id="genre" htmlFor="genre">
             Genre:&nbsp;&nbsp;
           </label>
           <input
@@ -102,7 +110,7 @@ export default function GameEditform() {
 
           <br />
 
-          <label id="cost" htmlFor="">
+          <label id="cost" htmlFor="cost">
             Cost:&nbsp;&nbsp;$
           </label>
           <input
@@ -117,7 +125,7 @@ export default function GameEditform() {
 
           <br />
 
-          <label id="release_date" htmlFor="">
+          <label id="release_date" htmlFor="release_date">
             Release Date:&nbsp;&nbsp;
           </label>
           <input
@@ -132,7 +140,7 @@ export default function GameEditform() {
 
           <br />
 
-          <label id="game_description" htmlFor="">
+          <label id="game_description" htmlFor="game_description">
             Game Description:&nbsp;&nbsp;
           </label>
           <textarea
