@@ -10,8 +10,8 @@ const checkName = (req, res, next) => {
   const checkBoolean = (req, res, next) => {
     const { multiplayer } = req.body;
     if (
-      multiplayer == "true" ||
-      multiplayer == "false" ||
+      multiplayer == true ||
+      multiplayer == false ||
       multiplayer == undefined
     ) {
       next();
