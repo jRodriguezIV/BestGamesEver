@@ -18,8 +18,8 @@ users with access to detailed information about these games, allowing them to ex
 ## Objectives
 
 - Sharpen and Showcase our skills as Web Developers
-- Write clean and readable code using react, express, js, jsx, html, and css
-- Integrate Youtube API
+- Write clean and readable code using react, express, js, jsx, html, and bootstrap
+- Connect and Render Front-End and Back-end projects
 - Create a responsive design
 
 ## Installation
