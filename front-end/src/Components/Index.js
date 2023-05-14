@@ -28,12 +28,6 @@ if (games[0]) {
 
      ))}
 
-        {/* Add This to the GameDetails Component */}
- {/* <p>Cost: <span style={{color:"rgb(217 56 7)"}}>{game.cost === "0.00" ? "Free" : game.cost}</span></p> */}
-             {/* <br />
-             <p>Genre: <span style={{color:"rgb(217 56 7)"}}>{game.genre}</span></p>
-             <br />
-             <p>Multiplayer? <span style={{color:"rgb(217 56 7)"}}>{game.multiplayer ? "Yes": "No" }</span></p> */}
     </div>
   );
 }}
