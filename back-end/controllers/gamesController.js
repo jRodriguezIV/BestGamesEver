@@ -1,5 +1,6 @@
 const express = require("express");
 const { getAllGames, getGame, createGame, deleteGame, updateGame } = require("../queries/games");
+const {checkName, checkBoolean} = require("../validations/checkGames")
 const games = express.Router();
 
 
@@ -24,7 +25,7 @@ games.get("/:id", async (req, res) => {
   });
   
   // CREATE
-  games.post("/", async (req, res) => {
+  games.post("/", checkName, checkBoolean, async (req, res) => {
     try {
       const game = await createGame(req.body);
       res.status(200).json(game);
@@ -44,7 +45,7 @@ games.get("/:id", async (req, res) => {
   });
   
   // UPDATE
-  games.put("/:id", async (req, res) => {
+  games.put("/:id", checkName, checkBoolean, async (req, res) => {
     const { id } = req.params;
     const updatedGame = await updateGame(id, req.body);
     res.status(200).json(updatedGame);

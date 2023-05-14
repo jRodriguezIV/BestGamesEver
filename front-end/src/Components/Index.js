@@ -24,7 +24,23 @@ if (games[0]) {
       style={{ margin: "3rem 10%", paddingTop:"100px" }}
     >
      {games.map((game) => (
-        <Game key={game.id} game={game}/> 
+       <span key={game.id} className="container mb-5 " style={{ backgroundColor: "#F24822" }}>
+       <div className="row">
+         <div className="col-lg-7 col-sm-1">
+           <img  className="pt-5 pb-4" src={game.image} style={{ width: "500px" }} alt={game.name}/>
+         </div>
+
+         <div className="col-lg-4 col-sm-11 pt-5 " style={{backgroundColor:"rgb(194 191 191)", marginTop:"10rem"}}>
+           <span style={{ backgroundColor: "rgb(194 191 191)" }}>
+             <p>Cost: <span style={{color:"rgb(217 56 7)"}}>{game.cost === "0.00" ? "Free" : game.cost}</span></p>
+             <br />
+             <p>Genre: <span style={{color:"rgb(217 56 7)"}}>{game.genre}</span></p>
+             <br />
+             <p>Multiplayer? <span style={{color:"rgb(217 56 7)"}}>{game.multiplayer ? "Yes": "No" }</span></p>
+
+           </span>
+         </div>
+       </div>
 
      ))}
 

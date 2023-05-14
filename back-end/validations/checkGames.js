@@ -8,7 +8,7 @@ const checkName = (req, res, next) => {
   
   
   const checkBoolean = (req, res, next) => {
-    const { is_favorite } = req.body;
+    const { multiplayer } = req.body;
     if (
       multiplayer == "true" ||
       multiplayer == "false" ||
