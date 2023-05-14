@@ -104,6 +104,7 @@ export default function GameDetails() {
           >
             <p>{game.game_description}</p>
             <button
+              onClick={() => navigate(`/${id}/edit`)}
               type="button"
               className="btn btn-dark"
               style={{

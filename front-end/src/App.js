@@ -4,6 +4,8 @@ import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import FourOhFour from "./Pages/FourOhFour";
 import Show from "./Pages/Show";
+import Edit from "./Pages/Edit";
+import New from "./Pages/New";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:id" element={<Show />}/>
+          <Route path="/:id/edit" element={<Edit />}/>
+          <Route path="/new" element={<New />} />
           <Route path="*" element={<FourOhFour />} />
         </Routes>
       </Router>
