@@ -89,8 +89,8 @@ export default function GameDetails() {
               <br />
               <p>
                 Multiplayer?{" "}
-                <span style={{ color: "rgb(217 56 7)" }}>
-                  {game.multiplayer ? "Yes" : "No"}
+                <span style={game.multiplayer ? {color: "green"}: {color:"red"} }>
+                  {game.multiplayer ? "👍🏽" : "👎🏽"}
                 </span>
               </p>
             </span>

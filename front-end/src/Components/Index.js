@@ -14,20 +14,17 @@ export default function Index() {
       .catch((error) => console.warn("catch", error));
   }, []);
 
-console.log(games)
-if (games[0]) {
-
-
-  return (
-    <div
-    className="row d-flex justify-content-center text-center"
-    style={{ margin: "3rem 10%", paddingTop:"100px" }}
-  >
-   {games.map((game) => (
-      <Game key={game.id} game={game}/> 
-
-   ))}
-
-  </div>
-  );
-}}
+  console.log(games);
+  if (games[0]) {
+    return (
+      <div
+        className="row d-flex justify-content-center text-center"
+        style={{ margin: "3rem 10%", paddingTop: "100px" }}
+      >
+        {games.map((game) => (
+          <Game key={game.id} game={game} />
+        ))}
+      </div>
+    );
+  }
+}

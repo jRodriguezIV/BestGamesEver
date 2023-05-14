@@ -7,23 +7,21 @@ const API = process.env.REACT_APP_API_URL;
 export default function GameEditform() {
   const { id } = useParams();
   const [game, setGame] = useState({
-    name:"",
+    name: "",
     multiplayer: false,
-    genre:"",
-    cost:"",
-    release_date:"",
-    game_description:"",
-    image:""
+    genre: "",
+    cost: "",
+    release_date: "",
+    game_description: "",
+    image: "",
   });
   const navigate = useNavigate();
-
-
 
   useEffect(() => {
     axios
       .get(`${API}/games/${id}`)
-      .then((response) => setGame(response.data)
-      ).catch((c) => console.warn("catch", c));
+      .then((response) => setGame(response.data))
+      .catch((c) => console.warn("catch", c));
   }, [id]);
 
   const handleTextChange = (event) => {
@@ -42,15 +40,14 @@ export default function GameEditform() {
           navigate(`/${id}`);
         },
         (error) => console.error(error)
-    ).catch((c) => console.warn("catch",c))
-  }
+      )
+      .catch((c) => console.warn("catch", c));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     updateGame(game, id);
   };
-
-
 
   return (
     <div
@@ -118,7 +115,7 @@ export default function GameEditform() {
             id="cost"
             value={game.cost}
             onChange={handleTextChange}
-            type="text"
+            type="number"
             style={{ width: "300px" }}
             required
           />

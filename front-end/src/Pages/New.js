@@ -1,9 +1,9 @@
 import GameNewForm from "../Components/GameNewForm";
 
 export default function New() {
-return (
+  return (
     <div>
-        <GameNewForm />
+      <GameNewForm />
     </div>
-)
+  );
 }
