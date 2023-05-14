@@ -9,6 +9,8 @@ export default function GameEditform() {
   const [game, setGame] = useState({});
   const navigate = useNavigate();
 
+  console.log(game)
+
   useEffect(() => {
     axios
       .get(`${API}/games/${id}`)
@@ -77,9 +79,9 @@ export default function GameEditform() {
           <input
             className="mb-2"
             id="multiplayer"
-            value={game.multiplayer}
             onChange={handleCheckBoxChange}
             type="checkbox"
+            checked={game.multiplayer}
             style={{ width: "300px" }}
           />
 
