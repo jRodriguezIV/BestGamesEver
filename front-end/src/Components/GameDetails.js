@@ -51,7 +51,7 @@ export default function GameDetails() {
             <img
               className="pt-5 pb-4"
               src={game.image}
-              style={{ width: "500px", top: "15%" }}
+              style={{ width: "50%", objectFit: "contain", borderRadius: "4px" }}
               alt={game.name}
             />
           </div>
