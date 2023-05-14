@@ -13,7 +13,7 @@ export default function GameDetails() {
       .get(`${API}/games/${id}`)
       .then((response) => setGame(response.data))
       .catch((error) => console.warn("catch", error));
-  }, []);
+  }, [id]);
 
   const handleDelete = () => {
     deleteGame();
